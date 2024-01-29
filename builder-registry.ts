@@ -1,8 +1,9 @@
 import { Builder } from "@builder.io/react";
 import dynamic from "next/dynamic";
 
+
 Builder.registerComponent(
-  dynamic(() => import("./components/Counter/Counter")),
+  dynamic(() => import("./components/Counter/Counter/Counter")),
   {
     name: "Counter",
     inputs: [
@@ -13,3 +14,27 @@ Builder.registerComponent(
     ],
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Gallery/ImageSlider")),
+  {
+    name: "ImageSlider",
+  
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Album/ReactAlbum")),
+  {
+    name: "Gallery",
+  
+  }
+);
+
+
+
+
+
+
+
+

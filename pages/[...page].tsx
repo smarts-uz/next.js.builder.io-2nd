@@ -7,6 +7,7 @@ import { BuilderContent } from "@builder.io/sdk";
 import { GetStaticProps } from "next";
 import "../builder-registry";
 
+
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 // Define a function that fetches the Builder
@@ -50,6 +51,13 @@ export async function getStaticPaths() {
   };
 }
 
+
+
+
+
+
+
+
 // Define the Page component
 export default function Page({ page }: { page: BuilderContent | null }) {
   const router = useRouter();
@@ -70,6 +78,9 @@ export default function Page({ page }: { page: BuilderContent | null }) {
       </Head>
       {/* Render the Builder page */}
       <BuilderComponent model="page" content={page || undefined} />
+
+
+      
     </>
   );
 }
